@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 560px;
+}
+
+.grid-item {
+  width: 120px;
+  height: 120px;
+  background-color: #000;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 555px;
+}

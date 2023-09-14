@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<form action="{% url 'calculate' %}" method="post">
+    {% csrf_token %}
+    <input class="input" type="text" name="expression" id="expression" value="{{ expression }}">
+    <div class="grid-container">
+        <div class="grid-item">
+            <button type="submit" name="value" value="7">7</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="8">8</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="9">9</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="operator" value="+">+</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="4">4</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="5">5</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="6">6</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="operator" value="*">x</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="1">1</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="2">2</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="3">3</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="operator" value="-">-</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="operator" value="/">/</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value="0">0</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="value" value=".">.</button>
+        </div>
+        <div class="grid-item">
+            <button type="submit" name="calculate" value="=">=</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
